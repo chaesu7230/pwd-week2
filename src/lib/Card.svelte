@@ -1,7 +1,11 @@
 <script lang="ts">
-	export let title: string;
-	export let summary: string;
-	export let href: string;
+	type Props = {
+		title: string;
+		summary: string;
+		href: string;
+	};
+
+	let { title, summary, href }: Props = $props();
 </script>
 
 <a class="card" href={href}>
