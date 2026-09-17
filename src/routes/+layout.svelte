@@ -1,23 +1,17 @@
-<!-- src/routes/+layout.svelte -->
-<script>  
-  let { children } = $props();
+<script>
+	import '../app.css';
 </script>
 
 <svelte:head>
-  <title>AJOU Mini Portfolio</title>
-  <meta name="description" content="SvelteKit + Vercel mini portfolio" />
+	<title>AJOU Mini Portfolio</title>
 </svelte:head>
 
 <nav>
-  <a href="/">Home</a>
-  <a href="/about">About</a>
-  <a href="/projects">Projects</a>
+	<a href="/">Home</a>
+	<a href="/about">About</a>
+	<a href="/projects">Projects</a>
 </nav>
 
 <main>
-  {@render children()}
+	<slot />
 </main>
-
-<style global>
-  @import '../app.css';
-</style>
